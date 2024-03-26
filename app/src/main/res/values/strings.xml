@@ -1,5 +1,14 @@
 <resources>
     <string name="app_name">Notes_CM</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="grade">Grade</string>
+    <string name="save">Save</string>
+    <string name="delete">Delete</string>
+    <string name="back">Back</string>
+    <string name="confirm_delete_message">Are you sure you want to delete the Note?</string>
+    <string name="confirm_delete_positive">Yes</string>
+    <string name="confirm_delete_negative">No</string>
+    <string name="note_deleted_message">Note successfully deleted!</string>
+    <string name="successfully_updated">Note successfully updated!</string>
+    <string name="empty_note">You can not have an empty note!</string>
+    <string name="recorded_successfully">Recorded successfully!</string>
 </resources>

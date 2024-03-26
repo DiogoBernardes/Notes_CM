@@ -54,31 +54,32 @@ class UpdateFragment : Fragment() {
         val noteText = view?.findViewById<EditText>(R.id.updateNote)?.text.toString()
 
         if(noteText.isEmpty()) {
-            makeText(context , "Não pode uma nota vazia!", Toast.LENGTH_LONG).show()
+            makeText(context , R.string.empty_note, Toast.LENGTH_LONG).show()
         }
         else {
             val note = Note(args.currentNote.id, noteText)
 
             mNoteViewModel.updateNote(note)
 
-            makeText(requireContext(), "Nota atualizada com sucesso!", Toast.LENGTH_LONG).show()
+            makeText(requireContext(), R.string.successfully_updated, Toast.LENGTH_LONG).show()
             findNavController().navigate(R.id.action_updateFragment_to_listFragment)
         }
     }
 
     private fun deleteNote() {
         val builder = AlertDialog.Builder(requireContext())
-        builder.setPositiveButton("Sim") { _, _ ->
+        builder.setPositiveButton(getString(R.string.confirm_delete_positive)) { _, _ ->
             mNoteViewModel.deleteNote(args.currentNote)
-            makeText(
+            Toast.makeText(
                 requireContext(),
-                "Nota apagada com sucesso!",
-                Toast.LENGTH_SHORT).show()
+                getString(R.string.note_deleted_message),
+                Toast.LENGTH_SHORT
+            ).show()
             findNavController().navigate(R.id.action_updateFragment_to_listFragment)
         }
-        builder.setNegativeButton("Não") { _, _ -> }
-        builder.setTitle("Apagar")
-        builder.setMessage("Tem a certeza que pretende apagar a Nota?")
+        builder.setNegativeButton(getString(R.string.confirm_delete_negative)) { _, _ -> }
+        builder.setTitle(getString(R.string.delete))
+        builder.setMessage(getString(R.string.confirm_delete_message))
         builder.create().show()
     }
 }
