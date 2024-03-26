@@ -1,11 +1,11 @@
-package com.example.notes_cm.data.database
+package com.example.notes_cm.data.db
 
 import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
-import com.example.notes_cm.data.DAO.NoteDAO
-import com.example.notes_cm.data.Entities.Note
+import com.example.notes_cm.data.dao.NoteDAO
+import com.example.notes_cm.data.entities.Note
 
 //Indica que esta classe representa uma base de dados Room
 @Database(entities = [Note :: class], version = 1, exportSchema = false)

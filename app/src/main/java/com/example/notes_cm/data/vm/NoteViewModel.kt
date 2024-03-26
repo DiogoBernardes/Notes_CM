@@ -1,12 +1,12 @@
-package com.example.notes_cm.data.VM
+package com.example.notes_cm.data.vm
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.viewModelScope
-import com.example.notes_cm.data.Entities.Note
-import com.example.notes_cm.data.Repository.NoteRepository
-import com.example.notes_cm.data.database.NoteDatabase
+import com.example.notes_cm.data.entities.Note
+import com.example.notes_cm.data.repository.NoteRepository
+import com.example.notes_cm.data.db.NoteDatabase
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 

@@ -17,7 +17,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Nota"
+        android:text="Grade"
         android:textSize="25dp" />
 
     <EditText
@@ -31,5 +31,10 @@
         android:layout_height="wrap_content"
         android:text="Save" />
 
+    <Button
+        android:id="@+id/backToList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Back" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout >
